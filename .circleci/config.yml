@@ -16,6 +16,12 @@ jobs:
           paths:
             - ~/.m2
           key: base-java-project-{{ checksum "pom.xml" }}
+          
+      - run: mvn sonar:sonar \
+          -Dsonar.projectKey=scrumtroopersleyends_base-java-project \
+          -Dsonar.organization=scrumtroopersleyends \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=9cd806cff63447db20d8c45d32c76cc1eab9e809
 
       - run: mvn package # run the actual tests
 
