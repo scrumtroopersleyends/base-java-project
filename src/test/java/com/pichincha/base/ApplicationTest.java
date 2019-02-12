@@ -23,7 +23,7 @@ public class ApplicationTest {
     private MockMvc mvc;
 
     @Test
-    public void getHost() throws Exception {
+    public void verifyAvailability() throws Exception {
         mvc.perform(get("/host/juan").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(startsWith("{\"message\":\"Hello juan")));

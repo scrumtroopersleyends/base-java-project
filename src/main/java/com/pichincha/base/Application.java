@@ -1,6 +1,6 @@
 package com.pichincha.base;
 
-import com.pichincha.model.Message;
+import com.pichincha.model.Response;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,10 +19,10 @@ public class Application {
     }
 
     @GetMapping("/host/{id}")
-    public Message home(@PathVariable String id) throws UnknownHostException {
-        Message message = new Message();
-        message.setMessage("Hello " + id + " from " + InetAddress.getLocalHost().getHostName());
-        return message;
+    public Response checkAvailability(@PathVariable String id) throws UnknownHostException {
+        Response response = new Response();
+        response.setMessage("Hello " + id + " from " + InetAddress.getLocalHost().getHostName());
+        return response;
     }
 
 }
