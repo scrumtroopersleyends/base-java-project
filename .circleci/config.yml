@@ -19,6 +19,8 @@ jobs:
 
       - run: mvn package # run the actual tests
 
+      - run: mvn sonar:sonar -Dsonar.projectKey=scrumtroopersleyends_base-java-project -Dsonar.organization=scrumtroopersleyends -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=e8b19434aaca45d4f944c343ec2ef77c35d3ddca
+
       - store_test_results:
           path: target/surefire-reports
 
