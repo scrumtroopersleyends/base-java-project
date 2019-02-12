@@ -28,3 +28,14 @@ target/
 # intellij IDE
 .idea/
 *.iml
+
+# eclipse
+.settings/
+.classpath
+.project
+
+# STS
+.springBeans
+
+# visual studio code
+.vscode/
