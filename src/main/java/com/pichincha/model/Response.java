@@ -3,7 +3,7 @@ package com.pichincha.model;
 import lombok.Getter;
 import lombok.Setter;
 
-public class Message {
+public class Response {
 
     @Getter
     @Setter
