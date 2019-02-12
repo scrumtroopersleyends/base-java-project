@@ -39,3 +39,5 @@ target/
 
 # visual studio code
 .vscode/
+
+.factorypath
